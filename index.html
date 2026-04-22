@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>...And Gretel — Advanced Flipbook</title>
+    <meta
+      name="description"
+      content="A premium interactive flipbook for ...And Gretel built with PageFlip.js, responsive spreads, and gilded fairy-tale styling."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Interactive fairy-tale presentation</p>
+          <h1>...And Gretel</h1>
+          <p class="subtitle">
+            A darker, smoother edition with real spread behavior, stronger page motion,
+            swipe support, keyboard navigation, and a cover designed like a gilded storybook.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <span class="pill">⌨ Arrow keys</span>
+          <span class="pill">📱 Swipe</span>
+          <span class="pill">↺ Restart</span>
+        </div>
+      </header>
+
+      <main class="stage-layout">
+        <aside class="side-panel left-panel">
+          <div class="panel-card">
+            <p class="panel-label">Edition</p>
+            <h2>Storybook viewer</h2>
+            <p>
+              Built as a premium flipbook with hard covers, real spreads on desktop,
+              portrait mode on mobile, and smoother page-turn behavior.
+            </p>
+          </div>
+        </aside>
+
+        <section class="book-stage" aria-label="Advanced flipbook viewer">
+          <div class="book-toolbar top-toolbar">
+            <button id="prevBtn" class="toolbar-btn" type="button" aria-label="Previous page">← Prev</button>
+            <div class="status-group">
+              <span class="status-label">Page</span>
+              <strong id="pageIndicator">Loading…</strong>
+            </div>
+            <button id="nextBtn" class="toolbar-btn" type="button" aria-label="Next page">Next →</button>
+          </div>
+
+          <div class="flipbook-wrap">
+            <div id="flipbook">
+              <div class="page page-cover cover-front" data-density="hard">
+                <div class="cover-frame outer"></div>
+                <div class="cover-frame inner"></div>
+                <div class="corner tl"></div>
+                <div class="corner tr"></div>
+                <div class="corner bl"></div>
+                <div class="corner br"></div>
+                <div class="sparkles">
+                  <span>✦</span>
+                  <span>✦</span>
+                  <span>✦</span>
+                  <span>✦</span>
+                </div>
+                <div class="cover-content">
+                  <p class="cover-kicker">A dark fairy tale</p>
+                  <h2>...And Gretel</h2>
+                  <p class="cover-tagline">Memory, silence, disappearance, and what survives the fire.</p>
+                </div>
+              </div>
+
+              <div class="page page-parchment title-page">
+                <div class="parchment-border"></div>
+                <div class="paper-content center-content">
+                  <p class="mini-label">Opening page</p>
+                  <h2>...And Gretel</h2>
+                  <p>
+                    Once upon a time, 30,000 people were killed by an abominable and powerful witch.
+                  </p>
+                  <div class="divider"></div>
+                  <p class="muted-copy">
+                    A fairy-tale retelling shaped by memory, disappearance, and the refusal to look away.
+                  </p>
+                </div>
+              </div>
+
+              <div class="page image-page">
+                <img src="assets/pages/page-1.png" alt="Page 1 of ...And Gretel" />
+              </div>
+
+              <div class="page image-page">
+                <img src="assets/pages/page-2.png" alt="Page 2 of ...And Gretel" />
+              </div>
+
+              <div class="page image-page">
+                <img src="assets/pages/page-3.png" alt="Page 3 of ...And Gretel" />
+              </div>
+
+              <div class="page image-page">
+                <img src="assets/pages/page-4.png" alt="Page 4 of ...And Gretel" />
+              </div>
+
+              <div class="page image-page">
+                <img src="assets/pages/page-5.png" alt="Page 5 of ...And Gretel" />
+              </div>
+
+              <div class="page image-page">
+                <img src="assets/pages/page-6.png" alt="Page 6 of ...And Gretel" />
+              </div>
+
+              <div class="page page-parchment afterword-page">
+                <div class="parchment-border"></div>
+                <div class="paper-content center-content">
+                  <p class="mini-label">About this edition</p>
+                  <h2>A storybook shell for a darker memory</h2>
+                  <p>
+                    This version was rebuilt as a more advanced viewer: cleaner movement,
+                    better responsiveness, and a more natural book experience on both desktop and mobile.
+                  </p>
+                  <blockquote>
+                    “The world doesn’t change. You just learn to see it the way it is.”
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="page page-cover cover-back" data-density="hard">
+                <div class="cover-frame outer"></div>
+                <div class="cover-frame inner"></div>
+                <div class="corner tl"></div>
+                <div class="corner tr"></div>
+                <div class="corner bl"></div>
+                <div class="corner br"></div>
+                <div class="cover-content back-cover-content">
+                  <p class="mini-label gold">Back cover</p>
+                  <p>
+                    A storybook object for a tale that resists forgetting.
+                  </p>
+                  <div class="divider gold-divider"></div>
+                  <p class="small-note">
+                    UNIVERSIDAD NACIONAL DE JOSE C PAZ
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-toolbar bottom-toolbar">
+            <button id="restartBtn" class="toolbar-btn secondary" type="button">Restart</button>
+            <button id="toggleSoundBtn" class="toolbar-btn secondary" type="button" aria-pressed="true">
+              Sound: On
+            </button>
+          </div>
+        </section>
+
+        <aside class="side-panel right-panel">
+          <div class="panel-card compact">
+            <p class="panel-label">Viewer mode</p>
+            <ul>
+              <li>Desktop: double-page spread</li>
+              <li>Mobile: portrait single page</li>
+              <li>Swipe, click, keyboard</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <audio id="flipSound" preload="auto">
+      <source src="data:audio/wav;base64,UklGRlYAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YTIAAACAgoSHh4eFhYSDg4KBf4B/f39/f4CBg4aJi4+Ulp+kpq+0u8rU3+Pq7fL4+/z9/fz59fDw7+zm3tTRxLqvlZB9aFhLQzk1MzY8RlJkb4SWq8Td8ff9/f39+fLs4NfKvaWMZ0w4KSkvOkxkdouiwtnw+vv9/f39/Pny7ebYx7KVfVg+LyknLDdObY24z+Xw+vz9/f39/Pfv4tzNuaCEYkUwKi0xQldwepWvxtzu+fz9/f39/Pny7ebXxrKRf1o/MCssM0Vbdo+mwNns+fz9/f39/fvz7ujazLihimBEMCooLjxSZ3+Yss7l8Pr8/f39/fz69+3i1cWvkYRbRDItLz1QZX2Xsc3l8fr8/f39/fz69+7j2Ma0m3NQOisqMEBdcoqjxN3u+vz9/f39/fv27OHa0sGsmYBfTzUwMjlJX3ORq8Pf7vr8/f39/fz79e7k2cm2mXNTOTArLz1LWnGTq8Tf7vr9/f39/fz79u3k2cq3mHBUOjArMzlIWG+SrdDi7/n8/f39/fz89+7m2Mu4mHJWPTAzNUBVbZKxyd7u+vz9/f39/fv27OHWxrKfiWJFPDIxN0xgaI+oxtrr+vz9/f39/fz58Oni1Me0nXZUOiooLj1TWnGWrdHm8Pr8/f39/f38+PHq4tbLvaKIY0Y1Li8yQldxeJCyyd7u+/39/f39/Pjw6eLWyr2liGJENisrMUJXcI+qxNzu+/39/f39/Pjw6uPVybqgh2BHNDAvNENYYI+pxtrr+/39/f39/fny7ebXxrKRgFtFOC0tNElfb5GuyN7u+/39/f39/fny7ufZyLGgiFxEOiotNUBXeZCqyN7v+/39/f39/fny7ubYxrKjj2RIMCcnL0FVcY+pxNvu/P39/f39/Pny7ubYx7SjiGJENC0uNURZZJCsyN7u+/39/f39/fny7ubYx7KihmBBNjArM0Zcb5GsyN7u+/39/f39/fny7ufYyLKehl5DMicpLzlOWG+TrdLm8fr8/f39/fz79e3k2cm1m3BVOy8rLjtPWXGTrdHm8fr9/f39/fz79u3k2Mq2mHBUPDIxN0RYaZGuyN7u/P39/f39/fz59ezk2Mu3mXJUPTMzOUBVcJGtxN7v/P39/f39/fz59ezk2Mu2mHJWPTMzN0BWbZSxxN7v/P39/f39/fv37OHa0sGsmIBgUDczMEBWcJOxxN7u/P39/f39/fz58unj1cezmHRSOjAtLzxMYXqUtMjd7fr9/f39/fz58Orj1Mi2mXBUOiotNUFXbZSxxN7u+/39/f39/fny7ufYyLGfiVxGOi0uNUBWbJOxxd7v+/39/f39/fny7ufYyLGfiV5GOi0uNUBWbJOxyd7v+/39/f39/fny7ufYyLGfiF1GOiotNUBWbZSxxd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxxd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBXbZOxyd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxyd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxyd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxxd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxxd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxxd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxxd7u+/39/f39/fny7ufYyLGfiFxGOiotNUBWbZOxxd7u+//8"></source>
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
